@@ -1,0 +1,28 @@
+name: Shop QA
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run test:bugs
+      - uses: actions/upload-artifact@v7.0.1
+        if: always()
+        with:
+          name: shop-qa-results
+          path: |
+            playwright-report/
+            test-results/
+            artifacts/
+          retention-days: 14

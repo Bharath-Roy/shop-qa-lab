@@ -1,0 +1,139 @@
+{
+  "recorded_at": "2026-09-28T05:18:04.821496+00:00",
+  "environment": {
+    "os": "Linux ARM64",
+    "node": "24.21.0",
+    "playwright": "1.63.0",
+    "browser": "Chromium"
+  },
+  "source_commit": "3049242",
+  "note": "Actual local runs. Seeded defects are training exercises. Hosted CI has not run.",
+  "normal_run": [
+    {
+      "test": "catalog search and category apply together",
+      "status": "passed"
+    },
+    {
+      "test": "anonymous users cannot read a cart or checkout",
+      "status": "passed"
+    },
+    {
+      "test": "wrong password does not create a session",
+      "status": "passed"
+    },
+    {
+      "test": "signing out invalidates the session on the server",
+      "status": "passed"
+    },
+    {
+      "test": "invalid quantity 0 leaves the cart unchanged",
+      "status": "passed"
+    },
+    {
+      "test": "invalid quantity -1 leaves the cart unchanged",
+      "status": "passed"
+    },
+    {
+      "test": "invalid quantity 11 leaves the cart unchanged",
+      "status": "passed"
+    },
+    {
+      "test": "invalid quantity 1.5 leaves the cart unchanged",
+      "status": "passed"
+    },
+    {
+      "test": "invalid quantity \"2\" leaves the cart unchanged",
+      "status": "passed"
+    },
+    {
+      "test": "invalid quantity null leaves the cart unchanged",
+      "status": "passed"
+    },
+    {
+      "test": "quantity boundaries and removing items recalculate the total",
+      "status": "passed"
+    },
+    {
+      "test": "unknown products and empty carts cannot create orders",
+      "status": "passed"
+    },
+    {
+      "test": "cart state is isolated between customers",
+      "status": "passed"
+    },
+    {
+      "test": "saved order rows agree with the API and independent arithmetic",
+      "status": "passed"
+    },
+    {
+      "test": "invalid JSON returns a client error and the server stays healthy",
+      "status": "passed"
+    },
+    {
+      "test": "customer signs in and buys two notebooks",
+      "status": "passed"
+    },
+    {
+      "test": "filters can return one item or an empty result",
+      "status": "passed"
+    },
+    {
+      "test": "a failed checkout keeps the cart and allows a retry",
+      "status": "passed"
+    },
+    {
+      "test": "mobile layout supports adding and removing a product",
+      "status": "passed"
+    },
+    {
+      "test": "order total includes every quantity @total",
+      "status": "passed"
+    },
+    {
+      "test": "another customer cannot read an order @owner",
+      "status": "passed"
+    },
+    {
+      "test": "replaying a checkout does not purchase a later cart @duplicate",
+      "status": "passed"
+    }
+  ],
+  "defect_checks": [
+    {
+      "defect": "wrong-total",
+      "mode": "baseline",
+      "status": "passed",
+      "outcome_matches_expectation": true
+    },
+    {
+      "defect": "wrong-total",
+      "mode": "defect enabled",
+      "status": "failed",
+      "outcome_matches_expectation": true
+    },
+    {
+      "defect": "owner-check",
+      "mode": "baseline",
+      "status": "passed",
+      "outcome_matches_expectation": true
+    },
+    {
+      "defect": "owner-check",
+      "mode": "defect enabled",
+      "status": "failed",
+      "outcome_matches_expectation": true
+    },
+    {
+      "defect": "duplicate-order",
+      "mode": "baseline",
+      "status": "passed",
+      "outcome_matches_expectation": true
+    },
+    {
+      "defect": "duplicate-order",
+      "mode": "defect enabled",
+      "status": "failed",
+      "outcome_matches_expectation": true
+    }
+  ]
+}
