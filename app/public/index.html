@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop QA Lab</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header><span class="eyebrow">A SMALL TESTING SANDBOX</span><h1>Everyday supplies.</h1>
+    <p>A notebook, a bottle, a tote. Simple products, plenty of things to test.</p></header>
+  <main>
+    <section aria-labelledby="account-title" class="account">
+      <h2 id="account-title">Your account</h2>
+      <form id="login-form">
+        <label>Email<input name="email" type="email" autocomplete="username" required></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+        <button>Sign in</button>
+      </form>
+      <div id="signed-in" hidden><p id="account-email"></p><button id="logout" class="secondary">Sign out</button></div>
+      <p class="hint">Demo account: asha@example.com / practice123. No real payments.</p>
+    </section>
+    <p id="message" role="status" aria-live="polite"></p>
+    <div class="shop-layout">
+      <section aria-labelledby="products-title">
+        <h2 id="products-title">The essentials</h2>
+        <form id="filter-form" class="filters">
+          <label>Search products<input name="search" type="search" placeholder="Try notebook"></label>
+          <label>Category<select name="category"><option value="">All categories</option><option>Stationery</option><option>Everyday</option></select></label>
+          <button class="secondary">Apply filters</button>
+        </form>
+        <div id="products"></div>
+      </section>
+      <aside aria-labelledby="cart-title"><h2 id="cart-title">Your cart</h2><div id="cart"></div>
+        <p class="total">Total <strong id="cart-total">₹0.00</strong></p><button id="checkout">Place order</button>
+        <div id="confirmation" hidden><h3>Order confirmed</h3><p id="order-details"></p></div>
+      </aside>
+    </div>
+  </main>
+  <footer>Practice shop · Prices in INR · Shipping, tax and payment processing are outside this demo.</footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

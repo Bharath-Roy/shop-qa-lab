@@ -1,0 +1,35 @@
+:root { font-family: system-ui, sans-serif; color: #24352d; background: #f6f5ef; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header, main, footer { max-width: 1080px; margin: auto; padding: 24px; }
+header { padding-top: 48px; }
+.eyebrow { font-size: 11px; letter-spacing: .15em; color: #607265; }
+h1 { font-size: clamp(32px, 5vw, 52px); letter-spacing: -.04em; margin: 12px 0; }
+h2 { font-size: 20px; margin-top: 0; }
+h3 { font-size: 17px; }
+header p, .hint, footer { color: #617167; }
+.account { border-top: 1px solid #ccd5ca; border-bottom: 1px solid #ccd5ca; padding: 20px 0; }
+form, .filters { display: flex; gap: 14px; align-items: end; flex-wrap: wrap; }
+[hidden] { display: none !important; }
+label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
+input, select { border: 1px solid #a3b5a7; background: #fff; padding: 10px; border-radius: 5px; font: inherit; min-height: 40px; }
+button { background: #285b42; color: white; border: 1px solid #285b42; border-radius: 5px; padding: 10px 15px; font: inherit; cursor: pointer; }
+button:disabled { opacity: .5; cursor: default; }
+button.secondary { color: #285b42; background: transparent; }
+button.link { border: 0; background: transparent; color: #285b42; padding: 4px; text-decoration: underline; font-size: 12px; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #dc9e30; outline-offset: 3px; }
+.hint { font-size: 12px; }
+#message { min-height: 24px; font-size: 14px; }
+.shop-layout { display: grid; grid-template-columns: 1fr 280px; gap: 28px; }
+#products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px; }
+article, aside { padding: 18px; border: 1px solid #d4dcd1; border-radius: 8px; background: white; }
+article input { width: 100%; }
+article button { width: 100%; margin-top: 14px; padding: 9px; font-size: 13px; }
+.price { color: #53745b; font-size: 20px; }
+aside { align-self: start; background: #eef1e6; }
+.cart-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; font-size: 13px; }
+.total { display: flex; justify-content: space-between; border-top: 1px solid #c7d1bf; padding-top: 16px; }
+#checkout { width: 100%; }
+#order-details { font-size: 14px; }
+footer { margin-top: 30px; font-size: 12px; }
+@media (max-width: 760px) { .shop-layout { grid-template-columns: 1fr; } #products { grid-template-columns: 1fr; } form label { flex: 1; min-width: 140px; } }

@@ -1,0 +1,22 @@
+{
+  "name": "shop-qa-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A small shop and a QA suite that checks totals, permissions and duplicate orders.",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node app/server.mjs",
+    "test": "playwright test",
+    "test:api": "playwright test tests/api.spec.ts tests/regressions.spec.ts",
+    "test:ui": "playwright test tests/browser.spec.ts",
+    "test:bugs": "node scripts/check-bugs.mjs",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}
