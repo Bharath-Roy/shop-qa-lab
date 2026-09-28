@@ -1,5 +1,7 @@
 # Shop QA Lab
 
+[GitHub Actions](https://github.com/Bharath-Roy/shop-qa-lab/actions/workflows/qa.yml)
+
 A small local shop for practising UI testing, API testing and database checks. The interesting part is checking whether the tests detect a defect, rather than just getting a green run.
 
 ## Run the shop

@@ -4,7 +4,7 @@ The local suite passed all 22 tests on Node 24.21.0 and Node 26.8.2, using Playw
 
 See [verification.json](../evidence/verification.json) for the recorded test names and statuses, and [mobile screenshot](../evidence/mobile-shop.png) for the browser viewport check.
 
-The record covers test/app commit `3049242`. Documentation and workflow files were added afterward. The GitHub Actions workflow has been checked locally for YAML syntax, but it has not run on GitHub. Passing local checks is not a hosted CI result.
+The local record covers test/app commit `3049242`. Documentation and workflow files were added afterward. The first [GitHub Actions run](https://github.com/Bharath-Roy/shop-qa-lab/actions/runs/36386361225) passed on 2026-09-28 for commit `bf4b074`, including TypeScript checks, all 22 tests, the controlled-defect checks and report upload on Ubuntu.
 
 ## Assessment
 
